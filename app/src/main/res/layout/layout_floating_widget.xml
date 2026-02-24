@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="8dp"
+    app:cardBackgroundColor="#FDFDFD">
+
+    <ImageView
+        android:id="@+id/icon_minimized"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@android:drawable/ic_menu_edit"
+        android:background="#FFC107"
+        android:padding="12dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/content_expanded"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/header_drag_area"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#FFC107"
+            android:paddingHorizontal="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Synote Floating"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:id="@+id/btn_minimize"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@android:drawable/ic_menu_close_clear_cancel" 
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/edt_note"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@null"
+            android:gravity="top|start"
+            android:hint="Escreva sua nota aqui..."
+            android:padding="12dp"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp"
+            android:gravity="center_vertical"
+            android:background="#EEEEEE">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_view" />
+
+            <SeekBar
+                android:id="@+id/seek_transparency"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progress="100" />
+            
+            <ImageView
+                android:id="@+id/btn_close_app"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@android:drawable/ic_delete"
+                app:tint="#F44336"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
